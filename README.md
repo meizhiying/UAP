@@ -1,40 +1,30 @@
 # UAP
 Duplex UMI split and analysis package
 
-=========
-
-About UAP
-
-=========
-
+===========
+# About UAP
+===========
 Name: UMI analysis package(UAP)
-
 Version: 1.1.0
-
 Function:
-
 	a.Split Duplex UMI with PE fastq files.
-
 	b.Calls consensus sequences from reads with the same unique molecular tag and applys sequencing error correction with unique molecular tag.
-
 	c.Calculates error rate from aligned bam file.
-
 Environment:linux
-
 Help information:run UAP in command line will get detail information
 
-============
-Installation
-============
+==============
+# Installation
+==============
 To clone the repository: git clone https://github.com/meizhiying/UAP.git
 Installation command line:
 	sh path_to_UAP/custom_install.sh
 
 This command will install the required software: bwa, picard, fgbio, samtools
 
-============
-Param of UAP
-============
+==============
+# Param of UAP
+==============
 UAP software has three modules: AnnoFastqWithUMI, BamConsensusAnalysis, ErrorRateStats
 Run path_to_UAP/bin/UAP will get the help information
     UMI analysis package.
@@ -74,9 +64,9 @@ Run path_to_UAP/bin/UAP will get the help information
                     -m <INT>        Minimum mapping quality
                     -o <STR>        Output prefix
 
-=============
-Requirements:
- =============
+===============
+# Requirements:
+===============
 Before running UAP, you need to make sure that several pieces of software
 and/or modules are installed on the system:
 1.java8,you need to add java8 path to env(JAVA_HOME)
@@ -85,9 +75,9 @@ and/or modules are installed on the system:
 4.R & ggplot2
 5.The reads id format of BamConsensusAnalysis's input bam file must be same with AnnoFastqWithUMI's output
 
-===============
-Running the UAP
-===============
+=================
+# Running the UAP
+=================
 Test data are saved in path_to_UAP/test
 Test_1.fq.gz: read1 fastq file from PE sequencing data
 Test_2.fq.gz: read2 fastq file from PE sequencing data
