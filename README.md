@@ -2,16 +2,25 @@
 Duplex UMI split and analysis package
 
 =========
+
 About UAP
+
 =========
 
 Name: UMI analysis package(UAP)
+
 Version: 1.1.0
+
 Function:
+
 	a.Split Duplex UMI with PE fastq files.
+
 	b.Calls consensus sequences from reads with the same unique molecular tag and applys sequencing error correction with unique molecular tag.
+
 	c.Calculates error rate from aligned bam file.
+
 Environment:linux
+
 Help information:run UAP in command line will get detail information
 
 ============
@@ -67,7 +76,7 @@ Run path_to_UAP/bin/UAP will get the help information
 
 =============
 Requirements:
-=============
+ =============
 Before running UAP, you need to make sure that several pieces of software
 and/or modules are installed on the system:
 1.java8,you need to add java8 path to env(JAVA_HOME)
