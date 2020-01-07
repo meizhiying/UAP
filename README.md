@@ -1,9 +1,7 @@
 # UAP
 Duplex UMI split and analysis package
 
-=========   
-About UAP  
-=========  
+## About UAP  
 
 Name: UMI analysis package(UAP)  
 Version: 1.1.0  
@@ -16,9 +14,7 @@ Function:
 Environment:linux  
 Help information:run UAP in command line will get detail information  
 
-============  
-Installation  
-============  
+## Installation  
 
 To clone the repository:  
 
@@ -30,9 +26,7 @@ Installation command line:
 
 This command will install the required software: bwa, picard, fgbio, samtools  
 
-============  
-Param of UAP  
-============  
+## Param of UAP  
 
 UAP software has three modules: AnnoFastqWithUMI, BamConsensusAnalysis, ErrorRateStats  
 Run path_to_UAP/bin/UAP will get the help information  
@@ -74,9 +68,7 @@ Run path_to_UAP/bin/UAP will get the help information
                     -m <INT>        Minimum mapping quality
                     -o <STR>        Output prefix
 
-=============  
-Requirements:  
-=============  
+## Requirements  
 
 Before running UAP, you need to make sure that several pieces of software  
 and/or modules are installed on the system:  
@@ -87,9 +79,7 @@ and/or modules are installed on the system:
 	4.R & ggplot2  
 	5.The reads id format of BamConsensusAnalysis's input bam file must be same with AnnoFastqWithUMI's output  
 
-===============  
-Running the UAP  
-===============  
+## Running the UAP  
 
 Test data are saved in path_to_UAP/test  
 
