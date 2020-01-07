@@ -1,17 +1,17 @@
 # UAP
 Duplex UMI split and analysis package
 
-===========
-# About UAP
-===========
-Name: UMI analysis package(UAP)
-Version: 1.1.0
-Function:
-	a.Split Duplex UMI with PE fastq files.
-	b.Calls consensus sequences from reads with the same unique molecular tag and applys sequencing error correction with unique molecular tag.
-	c.Calculates error rate from aligned bam file.
-Environment:linux
-Help information:run UAP in command line will get detail information
+=========   
+About UAP
+=========
+Name: UMI analysis package(UAP)  
+Version: 1.1.0  
+Function:  
+	a.Split Duplex UMI with PE fastq files.  
+	b.Calls consensus sequences from reads with the same unique molecular tag and applys sequencing error correction with unique molecular tag.  
+	c.Calculates error rate from aligned bam file.  
+Environment:linux  
+Help information:run UAP in command line will get detail information  
 
 ==============
 # Installation
