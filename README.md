@@ -3,7 +3,7 @@ Duplex UMI split and analysis package
 
 ## About UAP  
 
-Name: UMI analysis package(UAP)  
+Name: UMI Analysis Package(UAP)  
 Version: 1.1.0  
 Function:  
 
@@ -12,7 +12,7 @@ Function:
 	c.Calculates error rate from aligned bam file.  
 
 Environment:linux  
-Help information:run UAP in command line will get detail information  
+Help information:run UAP in command line will get detailed information  
 
 ## Installation  
 
@@ -26,9 +26,14 @@ Installation command line:
 
 This command will install the required software: bwa, picard, fgbio, samtools  
 
-## Param of UAP  
+Set the UAP_HOME environment variable to UAP path
 
-UAP software has three modules: AnnoFastqWithUMI, BamConsensusAnalysis, ErrorRateStats  
+	export UAP_HOME=path_to_UAP
+
+
+## Params of UAP  
+
+UAP has three modules: AnnoFastqWithUMI, BamConsensusAnalysis, ErrorRateStats  
 Run path_to_UAP/bin/UAP will get the help information  
 
     UMI analysis package.
@@ -73,11 +78,14 @@ Run path_to_UAP/bin/UAP will get the help information
 Before running UAP, you need to make sure that several pieces of software  
 and/or modules are installed on the system:  
 
-	1.java8,you need to add java8 path to env(JAVA_HOME)  
-	2.gcc  
-	3.Add UAP path to env(UAP_HOME)  
-	4.R & ggplot2  
-	5.The reads id format of BamConsensusAnalysis's input bam file must be same with AnnoFastqWithUMI's output  
+	* Java 8 is needed to run UAP. We recommend either of the following: 
+		* OpenJDK 8 with Hotspot from [AdoptOpenJdk](https://adoptopenjdk.net/)
+		* [OracleJDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+	which requires an Oracle account to download and comes with restrictive [license conditions](https://www.oracle.com/downloads/licenses/javase-license1.html).
+	* GNU make 
+	* C compiler (e.g. gcc or clang) 
+	* R 3.2.5 & ggplot2  
+	The read id in BamConsensusAnalysis's input bam and AnnoFastqWithUMI's output bam must be in the same format.  
 
 ## Running the UAP  
 
@@ -89,7 +97,7 @@ Test data are saved in path_to_UAP/test
 	Test.bed: Test bed file  
 
 1.AnnoFastqWithUMI:  
-This module will complete UMI split, command line:
+This module will complete UMI split and annotation, command line:
 
 	UAP AnnoFastqWithUMI -f Test_1.fq.gz -r Test_2.fq.gz -o Test -d Split_test -e 0
 
@@ -97,12 +105,12 @@ Three files named Test_1.splitUMI.fq.gz Test_1.splitUMI.fq.gz and Test.umi.log w
 Output fastq file contains reads with UMI information,Test.umi.log file contains UMI split rate  
 
 2.BamConsensusAnalysis:  
-This module will applys sequencing error correction with unique molecular tag, command line:  
+This module will apply sequencing error correction with unique molecular tag, command line:  
 
 	UAP BamConsensusAnalysis -i Test.bam -o Test -d Bam_test -b test.bed -F hg19.fa -m 10 -s 3 -u Duplex -B 0.1 -r 1
 
 Three files named Test.target.consensus.bam Test.target.consensus.bai and Test.family_size.xls will be generated.  
-Test.target.consensus.bam contains reads generated from UMI corection,Test.family_size.xls file contains UMI family size distribution  
+Test.target.consensus.bam contains reads generated from UMI corection,Test.family_size.xls file contains UMI family size distribution.  
 
 3.ErrorRateStats  
 This module will calculate sequencing error rate from bam file, command line:  
