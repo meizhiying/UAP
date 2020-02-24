@@ -20,11 +20,9 @@ To clone the repository:
 
 	git clone https://github.com/meizhiying/UAP.git
 
-Installation command line:  
+Installation command line,this command will install the required software: bwa, picard, fgbio, samtools:  
 
 	sh path_to_UAP/custom_install.sh
-
-This command will install the required software: bwa, picard, fgbio, samtools  
 
 Set the UAP_HOME environment variable to UAP path
 
