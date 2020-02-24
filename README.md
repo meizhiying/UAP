@@ -91,12 +91,15 @@ which requires an Oracle account to download and comes with restrictive [license
 UAP has three modules: AnnoFastqWithUMI, BamConsensusAnalysis, ErrorRateStats.The read id in BamConsensusAnalysis's input bam and AnnoFastqWithUMI's output bam must be in the same format.  
 
 Test data are saved in path_to_UAP/test  
+
 	Test_1.fq.gz: read1 fastq file from PE sequencing data  
 	Test_2.fq.gz: read2 fastq file from PE sequencing data  
 	Test.bam: Test bam file  
 	Test.bed: Test bed file  
 
-* AnnoFastqWithUMI:  
+
+1.AnnoFastqWithUMI:  
+
 This module will complete UMI split and annotation, command line:
 
 	UAP AnnoFastqWithUMI -f Test_1.fq.gz -r Test_2.fq.gz -o Test -d Split_test -e 0
@@ -104,7 +107,8 @@ This module will complete UMI split and annotation, command line:
 Three files named Test_1.splitUMI.fq.gz Test_1.splitUMI.fq.gz and Test.umi.log will be generated.  
 Output fastq file contains reads with UMI information,Test.umi.log file contains UMI split rate  
 
-* BamConsensusAnalysis:  
+2.BamConsensusAnalysis:  
+
 This module will apply sequencing error correction with unique molecular tag, command line:  
 
 	UAP BamConsensusAnalysis -i Test.bam -o Test -d Bam_test -b test.bed -F hg19.fa -m 10 -s 3 -u Duplex -B 0.1 -r 1
@@ -112,7 +116,8 @@ This module will apply sequencing error correction with unique molecular tag, co
 Three files named Test.target.consensus.bam Test.target.consensus.bai and Test.family_size.xls will be generated.  
 Test.target.consensus.bam contains reads generated from UMI corection,Test.family_size.xls file contains UMI family size distribution.  
 
-* ErrorRateStats  
+3.ErrorRateStats  
+
 This module will calculate sequencing error rate from bam file, command line:  
 
 	UAP ErrorRateStats -i Test.bam -o Error_stat_test/Test -F hg19.fa -m 10
