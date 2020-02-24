@@ -78,14 +78,14 @@ Run path_to_UAP/bin/UAP will get the help information
 Before running UAP, you need to make sure that several pieces of software  
 and/or modules are installed on the system:  
 
-	* Java 8 is needed to run UAP. We recommend either of the following: 
-		* OpenJDK 8 with Hotspot from [AdoptOpenJdk](https://adoptopenjdk.net/)
-		* [OracleJDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-	which requires an Oracle account to download and comes with restrictive [license conditions](https://www.oracle.com/downloads/licenses/javase-license1.html).
-	* GNU make 
-	* C compiler (e.g. gcc or clang) 
-	* R 3.2.5 & ggplot2  
-	The read id in BamConsensusAnalysis's input bam and AnnoFastqWithUMI's output bam must be in the same format.  
+* Java 8 is needed to run UAP. We recommend either of the following: 
+	* OpenJDK 8 with Hotspot from [AdoptOpenJdk](https://adoptopenjdk.net/)
+	* [OracleJDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+which requires an Oracle account to download and comes with restrictive [license conditions](https://www.oracle.com/downloads/licenses/javase-license1.html).
+* GNU make 
+* C compiler (e.g. gcc or clang) 
+* R 3.2.5 & ggplot2  
+The read id in BamConsensusAnalysis's input bam and AnnoFastqWithUMI's output bam must be in the same format.  
 
 ## Running the UAP  
 
