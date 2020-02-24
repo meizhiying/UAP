@@ -20,7 +20,7 @@ To clone the repository:
 
 	git clone https://github.com/meizhiying/UAP.git
 
-Installation command line,this command will install the required software: bwa, picard, fgbio, samtools:  
+Installation command line:  
 
 	sh path_to_UAP/custom_install.sh
 
