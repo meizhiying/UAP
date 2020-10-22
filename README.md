@@ -28,6 +28,9 @@ Set the UAP_HOME environment variable to UAP path
 
 	export UAP_HOME=path_to_UAP
 
+Set the JAVA_HOME environment variable to Java 8 path
+
+	export JAVA_HOME=path_to_java8
 
 ## Params of UAP  
 
